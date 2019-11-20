@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+       
+        
+        
+           
+
+              
+       
+        <h:form  target="blank">
+                  
+            
+            <p:panel>
+            <h:panelGrid id="grid">
+            
+               
+                
+            <h3>  CRUD</h3>
+            
+            
+              
+            
+            
+               <h:outputLabel for="PESEL" value="PESEL" />
+               <p:inputText  id="PESEL" value="#{startAppMB.pesel}" >    
+               </p:inputText>  
+               
+               <h:outputLabel for="NAME" value="NAME" />
+               <p:inputText  id="NAME" value="#{startAppMB.name}" >    
+               </p:inputText> 
+               
+               <h:outputLabel for="EMAIL" value="EMAIL" />
+               <p:inputText  id="EMAIL" value="#{startAppMB.email}" >    
+               </p:inputText> 
+               
+               <h:outputLabel for="TELE" value="TELE" />
+               <p:inputText  id="TELE" value="#{startAppMB.tele}" >    
+               </p:inputText> 
+               
+               <p:commandButton   value="CREAT" ajax="true" update="grid" action="#{startAppMB.addPerson()}" /> 
+               <p:commandButton   value="READ (ENTER NAME)" ajax="true" update="grid" action="#{startAppMB.readPerson()}" />  
+               <p:commandButton   value="UPDATE" ajax="true" update="grid" action="#{startAppMB.updatePerson()}" />  
+               <p:commandButton   value="DELETE" ajax="true" update="grid" action="#{startAppMB.deletePerson()}" /> 
+           
+             
+               <h:outputText id="display" value="#{startAppMB.pesel1}" escape="false"/>
+               <h:outputText id="display1" value="#{startAppMB.email1}" escape="false"/>
+               <h:outputText id="display2" value="#{startAppMB.name1}" escape="false"/>
+               <h:outputText id="display3" value="#{startAppMB.tele1}" escape="false"/> 
+               <h:outputText id="display4" value="#{startAppMB.delete}" escape="false"/> 
+               <h:outputText id="display5" value="#{startAppMB.update}" escape="false"/> 
+              
+            
+         
+         
+        </h:panelGrid>
+                
+      </p:panel>
+            
+                   
+ </h:form>
+        
+        
+        
+       
+        
+      
+
+         
+        
+ </h:body>
+    
+</html>
+
